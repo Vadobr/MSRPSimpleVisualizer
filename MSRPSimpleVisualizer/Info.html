@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <script>
+        function setLanguage(lang) {
+            localStorage.setItem("selectedLang", lang); // Запам'ятовуємо вибір користувача
+            document.documentElement.lang = lang;
+            document.getElementById("uk-content").style.display = lang === "uk" ? "block" : "none";
+            document.getElementById("en-content").style.display = lang === "en" ? "block" : "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedLang = localStorage.getItem("selectedLang");
+            const userLang = savedLang || (navigator.language.startsWith("en") ? "en" : "uk");
+            setLanguage(userLang);
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About program - Bondarenko Vadym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0073e6;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .lang-buttons {
+            text-align: right;
+        }
+        .lang-buttons button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #0073e6;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id = "uk-content">
+        <div class="lang-buttons">
+            <button onclick="setLanguage('uk')">🇺🇦 Українська</button>
+            <button onclick="setLanguage('en')">🇬🇧 English</button>
+        </div>
+
+                <h1>Бондаренко Вадим Сергійович</h1>
+        <p><strong>Студент</strong> Харківського Національного Університету радіоелектроніки</p>
+        <p>(2020 - 2024) - бакалавр, (2024 - 2026) - магістр</p>
+        <p>metavadobr@gmail.com</p>
+        <h2>Проєкт</h2>
+        <p>Цей проєкт був створений як кваліфікаційна робота у межах спеціальності <strong>Комп'ютерна інженерія</strong>.</p>
+        
+        <h2>Опис</h2>
+        <p>Проєкт представляє собою візуалізацію <strong>Марковського процесу</strong> (МП), який класифікується за двома критеріями: стаціонарність та дискретність.</p>
+        <ul>
+            <li><strong>Марковський процес</strong> - такий, у якому ймовірність системи перейти в інший стан залежить лише від поточного стану і не залежить від історії переходів.</li>
+            <li><strong>Стаціонарний МП</strong> - такий, у якому ймовірність переходу є постійною з часом, описується константою. В іншому випадку вона описується функцією від часу.</li>
+            <li><strong>Дискретний МП</strong> - такий, що можна розділити на конкретні кроки, синоніми - "непостійний", "не безперервний", антоніми відповідно - "не дискретний", "постійни", "безперервний".</li>
+        </ul>
+        <p>Детальніше за посиланнями:</p>
+        <ul>
+            <li>Ching, Wai-Ki, and Michael K. Ng. Markov Chains: Models, Algorithms and Applications. Springer, 2006. - 211 р.</li>
+        </ul>
+        
+        <h2>Можливості програми</h2>
+        <p>Програма дозволяє досліджувати Марковський процес на визначеному проміжку часу із заданою точністю. Завдяки природі МП, можливе дослідження на нескінченному проміжку часу, і точність у цьому випадку не є критичною.</p>
+        <p>Дослідження можуть бути візуалізовані у таких форматах:</p>
+        <ul>
+            <li>Граф</li>
+            <li>Графік</li>
+            <li>Таблиця</li>
+        <p>З можливістю збереження результатів</p>
+        </ul>
+        
+        <h2>Деталі роботи з програмою</h2>
+
+	<p>При запуску програму перше що пропонується користувачеві - змінити мову у меню вгорі</p>
+	<p>В залежності від досліджуваного процесу оберіть його параметри з випадаючих списків: стаціонарний/нестаціонарний, постійний/непостійний. При зміні на постійний режим імовірності заміняються інтенсивностями і розблокується головна діагональ. При виборі нестаціонарного режиму при виборі кожної клітини з'являтиметься поле для введення функції, але можливість вводити константи зберігаються. Пропонується вставляти функції з буфера обміну, щоб унеможливити помилки.</p>
+	<p>Матриця збільшується при збільшенні кількості станів. Кількість переходів змінюється автоматично в ході заповнення матриці.</p>
+	<p>Параметри Час дослідження і "Кількість кроків" відповідають за точність проведених досліджень. Змінюйте їх так, щоб у таблиці "Результати" останні 2-3 рядка повністю збігались, а на вкладці "Графіки" всі графіки були гладкі та прямували до своїх асимптот (зазвичай це горизонтальна лінія).</p>
+        <p>Використовуючи цифри, стрілки на клавіатурі, клавішу Enter можете заповнити матрицю. Управління є інтуїтивним, достатньо лише клавіатури. Різниці між комою і крапкою немає. Помилки виправлятимуться автоамтично.</p>
+	<p>В програмі відсутні кнопки "Вирішити" чи "Зробити", тому просто перемикайтесь між вкладками, рівняння вирішуються автоматично.</p>
+	<p>На вкладці "Граф" можна перевірити, чи вийшов процес на схожий до того, що ви досліджуєте. Ця вкладка є суто візуалізацією.</p>
+	<p>На вкладці "Результати" наводяться результати дослідження у вигляді таблиці.</p>
+	<p>На вкладці "Графіки" наводяться результати дослідження у вигляді графіків. Ця вкладка є суто візуалізацією.</p>
+	<p>Вкладки 2, 3, 4 можна зберегти у відповідних форматах за допомогою меню "Файл".</p>
+	<p>Більше інформації про дослідження Марковських процесів ви можете знайти в курсі <strong>"Комп'ютерні системи"</strong>.</p>
+    </div>
+
+    <div class="container" id = "en-content">
+        <div class="lang-buttons">
+            <button onclick="setLanguage('uk')">🇺🇦 Українська</button>
+            <button onclick="setLanguage('en')">🇬🇧 English</button>
+        </div>
+
+                <h1>Vadym Bondarenko</h1>
+            <p><strong>Student</strong> of Kharkiv National University of Radio Electronics</p>
+            <p>(2020 - 2024) - Bachelor's degree, (2024 - 2026) - Master's degree</p>
+            <p>metavadobr@gmail.com</p>
+
+            <h2>Project</h2>
+            <p>This project was created as a qualification work within the specialty <strong>Computer Engineering</strong>.</p>
+            
+            <h2>Description</h2>
+            <p>The project represents a visualization of a <strong>Markov process</strong> (MP), which is classified based on two criteria: stationarity and discreteness.</p>
+            <ul>
+                <li><strong>Markov process</strong> - a process where the probability of transition to another state depends only on the current state.</li>
+                <li><strong>Stationary MP</strong> - a process where the transition probability remains constant over time.</li>
+                <li><strong>Discrete MP</strong> - can be divided into specific steps.</li>
+            </ul>
+            <p>More details at:</p>
+        <ul>
+            <li>Ching, Wai-Ki, and Michael K. Ng. Markov Chains: Models, Algorithms and Applications. Springer, 2006. - 211 р.</li>
+        </ul>
+        
+	<h2>Program Capabilities</h2>
+	<p>The program allows studying the Markov process over a specified time interval with a given accuracy. Due to the nature of the Markov process, it can be analyzed over an infinite time interval, and accuracy in this case is not critical.</p>
+	<p>The research can be visualized in the following formats:</p>
+	<ul>
+	    <li>Graph</li>
+	    <li>Graphics</li>
+	    <li>Table</li>
+	    <p>With the ability to save results</p>
+	</ul>
+	
+	<h2>Program Usage Details</h2>
+	
+	<p>When the program starts, the first thing offered to the user is to change the language in the top menu.</p>
+	<p>Depending on the studied process, select its parameters from the dropdown lists: stationary/non-stationary, petmanent/non-permanent. When switching to petmanent mode, probabilities are replaced with intensities, and the main diagonal is unlocked. When selecting the non-stationary mode, a field for entering a function will appear for each selected cell, but the ability to enter constants remains. It is recommended to paste functions from the clipboard to avoid mistakes.</p>
+	<p>The matrix expands as the number of states increases. The number of transitions changes automatically as the matrix is filled.</p>
+	<p>The parameters Research Time and "Number of Steps" determine the accuracy of the conducted studies. Adjust them so that in the "Results" table, the last 2-3 rows completely match, and in the "Graphics" tab, all graphs are smooth and tend to their asymptotes (usually a horizontal line).</p>
+	<p>You can fill in the matrix using numbers, arrow keys, and the Enter key. The controls are intuitive and require only a keyboard. There is no difference between a comma and a dot. Mistakes will be corrected automatically.</p>
+	<p>The program does not have "Solve" or "Execute" buttons, so just switch between tabs; the equations are solved automatically.</p>
+	<p>In the "Graph" tab, you can check if the process resembles the one you are studying. This tab is purely for visualization.</p>
+	<p>In the "Results" tab, research results are presented in a table format.</p>
+	<p>In the "Graphics" tab, research results are presented as graphs. This tab is purely for visualization.</p>
+	<p>Tabs 2, 3, and 4 can be saved in the corresponding formats using the "File" menu.</p>
+	<p>More information about Markov process research can be found in the <strong>"Computer Systems"</strong> course.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6C8D7CF6-A8D8-46A8-BBF1-A9D2C9B6748F}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>6.6.3_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>6.6.3_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AdvancedBeginProbabilityCell.cpp" />
+    <ClCompile Include="AdvancedCell.cpp" />
+    <ClCompile Include="AdvancedCentralCell.cpp" />
+    <ClCompile Include="AdvancedCornerCell.cpp" />
+    <ClCompile Include="AdvancedLabelClass.cpp" />
+    <ClCompile Include="AdvancedResultTable.cpp" />
+    <ClCompile Include="AdvancedSideCellClass.cpp" />
+    <ClCompile Include="AdvancedSmartMatrix.cpp" />
+    <ClCompile Include="AdvancedTableHeaderCellClass.cpp" />
+    <ClCompile Include="BeginProbabilityBar.cpp" />
+    <ClCompile Include="clickabkemenu.cpp" />
+    <ClCompile Include="CornerLabelPairWidget.cpp" />
+    <ClCompile Include="GridMovementer.cpp" />
+    <ClCompile Include="LabelPairWidgetClass.cpp" />
+    <ClCompile Include="MainThreadWorkloadObsercerClass.cpp" />
+    <ClCompile Include="MatrixViewModel.cpp" />
+    <ClCompile Include="OverworkObserverThreadClass.cpp" />
+    <ClCompile Include="SmartCell\SmartCellClass.cpp" />
+    <ClCompile Include="SmartMatrixWidget\SmartMatrixWidgetClass.cpp" />
+    <ClCompile Include="TransitionsMatrix.cpp" />
+    <QtRcc Include="MainWindow.qrc" />
+    <QtUic Include="MainWindow.ui" />
+    <QtMoc Include="MainWindow.h" />
+    <ClCompile Include="GraphicsWidgetClass.cpp" />
+    <ClCompile Include="GraphWidgetClass.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdvancedBeginProbabilityCell.h" />
+    <QtMoc Include="clickabkemenu.h" />
+    <ClInclude Include="MatrixView.h" />
+    <QtMoc Include="MainThreadWorkloadObsercerClass.h" />
+    <QtMoc Include="OverworkObserverThreadClass.h" />
+    <ClInclude Include="TransitionsMatrix.h" />
+    <QtMoc Include="AdvancedLabelClass.h" />
+    <QtMoc Include="AdvancedResultTable.h" />
+    <QtMoc Include="AdvancedTableHeaderCellClass.h" />
+    <ClInclude Include="CornerLabelPairWidget.h" />
+    <QtMoc Include="LabelPairWidgetClass.h" />
+    <QtMoc Include="AdvancedCell.h" />
+    <QtMoc Include="AdvancedCentralCell.h" />
+    <ClInclude Include="AdvancedCornerCell.h" />
+    <ClInclude Include="AdvancedSideCellClass.h" />
+    <QtMoc Include="AdvancedSmartMatrix.h" />
+    <ClInclude Include="BeginProbabilityBar.h" />
+    <ClInclude Include="GraphicsWidgetClass.h" />
+    <ClInclude Include="GraphWidgetClass.h" />
+    <ClInclude Include="GridMovementer.h" />
+    <QtMoc Include="MatrixViewModel.h" />
+    <QtMoc Include="SmartMatrixWidget\SmartMatrixWidgetClass.h" />
+    <QtMoc Include="SmartCell\SmartCellClass.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

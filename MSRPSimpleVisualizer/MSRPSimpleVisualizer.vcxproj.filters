@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CustomWidgets">
+      <UniqueIdentifier>{c6527472-9b17-4356-aef0-70885ef222e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets\Imported Files">
+      <UniqueIdentifier>{6fcdf599-629e-4968-a9ae-13e36a117aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{ef3173f0-d143-4441-9a4a-d31e48b9224d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets\MatrixView">
+      <UniqueIdentifier>{a392d900-3f0b-498e-9ddb-def32739caa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets\ResultTableView">
+      <UniqueIdentifier>{c6702f96-1173-4812-a7d1-7d17c140c9db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets\GraphView">
+      <UniqueIdentifier>{c554f838-77d5-413b-bb0a-9414ebc5ad38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiThreading">
+      <UniqueIdentifier>{63b36049-c734-4361-9b9d-27c255bb66f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MultiThreading\LoadingThreads">
+      <UniqueIdentifier>{48eea233-2f6c-4aa8-907d-fc166881a2fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewmodel">
+      <UniqueIdentifier>{35d6df2d-2eb6-4d36-b286-a5b059eece51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Window\Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Equations">
+      <UniqueIdentifier>{7f3d4c20-6569-49ce-9d85-e12012dbb01c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets\GraphicsView">
+      <UniqueIdentifier>{2a05611f-9d0d-4552-8c1e-19f5b5c85e8e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MainWindow.qrc">
+      <Filter>Window\Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="MainWindow.ui">
+      <Filter>Window\Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsWidgetClass.cpp">
+      <Filter>CustomWidgets\GraphicsView</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphWidgetClass.cpp">
+      <Filter>CustomWidgets\GraphView</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartCell\SmartCellClass.cpp">
+      <Filter>CustomWidgets\Imported Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartMatrixWidget\SmartMatrixWidgetClass.cpp">
+      <Filter>CustomWidgets\Imported Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridMovementer.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="BeginProbabilityBar.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedSmartMatrix.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedSideCellClass.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedCornerCell.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedCentralCell.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedCell.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedBeginProbabilityCell.cpp">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelPairWidgetClass.cpp">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClCompile>
+    <ClCompile Include="CornerLabelPairWidget.cpp">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedTableHeaderCellClass.cpp">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedResultTable.cpp">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedLabelClass.cpp">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionsMatrix.cpp">
+      <Filter>Equations</Filter>
+    </ClCompile>
+    <ClCompile Include="OverworkObserverThreadClass.cpp">
+      <Filter>MultiThreading\LoadingThreads</Filter>
+    </ClCompile>
+    <ClCompile Include="MainThreadWorkloadObsercerClass.cpp">
+      <Filter>MultiThreading\LoadingThreads</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixViewModel.cpp">
+      <Filter>Viewmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="clickabkemenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Window</Filter>
+    </QtMoc>
+    <QtMoc Include="SmartCell\SmartCellClass.h">
+      <Filter>CustomWidgets\Imported Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SmartMatrixWidget\SmartMatrixWidgetClass.h">
+      <Filter>CustomWidgets\Imported Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedSmartMatrix.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedCentralCell.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedCell.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelPairWidgetClass.h">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedTableHeaderCellClass.h">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedResultTable.h">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </QtMoc>
+    <QtMoc Include="AdvancedLabelClass.h">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </QtMoc>
+    <QtMoc Include="OverworkObserverThreadClass.h">
+      <Filter>MultiThreading\LoadingThreads</Filter>
+    </QtMoc>
+    <QtMoc Include="MainThreadWorkloadObsercerClass.h">
+      <Filter>MultiThreading\LoadingThreads</Filter>
+    </QtMoc>
+    <QtMoc Include="MatrixViewModel.h">
+      <Filter>Viewmodel</Filter>
+    </QtMoc>
+    <QtMoc Include="clickabkemenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GraphicsWidgetClass.h">
+      <Filter>CustomWidgets\GraphicsView</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphWidgetClass.h">
+      <Filter>CustomWidgets\GraphView</Filter>
+    </ClInclude>
+    <ClInclude Include="GridMovementer.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+    <ClInclude Include="BeginProbabilityBar.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvancedSideCellClass.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvancedCornerCell.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvancedBeginProbabilityCell.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+    <ClInclude Include="CornerLabelPairWidget.h">
+      <Filter>CustomWidgets\ResultTableView</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionsMatrix.h">
+      <Filter>Equations</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixView.h">
+      <Filter>CustomWidgets\MatrixView</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+key;en;ua
+language;Language;Мова
+graph;Graph;Граф
+graphics;Graphic;Графіки
+matrix;Matrix;Матриця
+results;Results;Результати 
+begFinTime;Begin : End time;Початковий : Кінцевий час
+mode;Mode;Режим
+intens;Intensities;Інтенсивності
+stateCount;Number of states;Кількість станів
+transCount;Number of transitions;Кількість переходів
+stepCount;Number of steps;Кількість кроків
+unstat;Non-stationary;Нестаціонарний
+stat;Stationary;Стаціонарний
+nonPerm;Non-permanent;Непостійні
+perm;Permanent;Постійні
+file;File;Файл
+help;Help;Довідка
+save;Save;Зберегти
+saveAs;Save as…;Зберегти як…
+open;Open…;Відкрити…
+saveGraph;Save graph…;Зберегти граф…
+saveResults;Save results…;Зберегти результати…
+saveGraphics;Save graphics…;Зберегти графіки…
+begProbs;Begining probabilities;Початкові ймовірності

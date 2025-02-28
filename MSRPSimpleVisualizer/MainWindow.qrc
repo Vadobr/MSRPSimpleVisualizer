@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>arrow-down.png</file>
+        <file>arrow-up.png</file>
+        <file>decrease.png</file>
+        <file>increase.png</file>
+        <file>Loading.gif</file>
+        <file>Localization.csv</file>
+        <file>Info.html</file>
+    </qresource>
+</RCC>
